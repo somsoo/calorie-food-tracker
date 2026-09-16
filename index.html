@@ -488,9 +488,9 @@
 
         document.getElementById('copyDietBtn').addEventListener('click', () => {
             let total = meals.reduce((acc, m) => acc + m.cal, 0);
-            let text = "🥗 오늘 나의 식단 일지 (Calorie Tracker)
+            let text = `🥗 오늘 나의 식단 일지 (Calorie Tracker)
 -----------------------------------
-";
+`;
             meals.forEach(m => {
                 text += `[${m.type}] ${m.name}: ${m.cal} kcal (탄 ${m.carb}g / 단 ${m.protein}g / 지 ${m.fat}g)
 `;
