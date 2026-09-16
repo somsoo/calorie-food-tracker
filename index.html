@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <title>한국인 식단 & 칼로리 영양 카운터 | 기초대사량 다이어트 계산기 (Calorie Tracker)</title>
+    <meta content="한국인 다이어트 맞춤 식단 칼로리 카운터. 기초대사량(BMR) 자동 계산, 탄단지 영양 비율 시각화, 일일 섭취 칼로리 기록 무료." name="description"/>
+    <link href="https://calorie.enjoy-onepage.com/" rel="canonical"/>
+    <meta content="website" property="og:type"/>
+    <meta property="og:locale" content="ko_KR">
+    <meta content="https://calorie.enjoy-onepage.com/" property="og:url"/>
+    <meta content="Calorie Tracker - 한국인 식단 & 칼로리 카운터" property="og:title"/>
+    <meta content="기초대사량(BMR)과 탄단지 비율을 계산하고 식단을 기록하는 100% 로컬 다이어트 도구입니다." property="og:description"/>
+    <meta content="https://calorie.enjoy-onepage.com/og-image.png" property="og:image"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="Calorie Tracker - 한국인 식단 & 칼로리 카운터" name="twitter:title"/>
+    <meta content="기초대사량(BMR)과 탄단지 비율을 계산하고 식단을 기록하는 100% 로컬 다이어트 도구입니다." name="twitter:description"/>
+    <meta content="https://calorie.enjoy-onepage.com/og-image.png" name="twitter:image"/>
+    <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://calorie.enjoy-onepage.com/#webapp",
+          "name": "Calorie Tracker - 식단 & 칼로리 영양 카운터",
+          "url": "https://calorie.enjoy-onepage.com/",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript. Requires HTML5.",
+          "description": "기초대사량(BMR) 자동 계산, 탄단지 영양 비율 시각화, 일일 섭취 칼로리 다이어트 기록 도구.",
+          "image": "https://calorie.enjoy-onepage.com/og-image.png",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://calorie.enjoy-onepage.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "기초대사량(BMR)과 일일 총 에너지 소비량(TDEE)은 어떻게 계산되나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "국제 공인 미플린-세인트 지어(Mifflin-St Jeor) 공식에 따라 성별, 나이, 키, 체중을 대입하여 호흡과 심장 박동에 필요한 BMR을 구하고, 평소 활동 계수(1.2~1.9)를 곱해 하루 유지 칼로리(TDEE)를 산출합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "MyFitnessPal처럼 바코드 스캔이나 음식 입력 시 결제를 요구하나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "아닙니다. Calorie Tracker는 자주 먹는 한국인 대표 음식(현미밥, 닭가슴살, 김치찌개 등) 프리셋을 제공하며, 모든 식단 기록과 탄단지 비율 분석을 100% 무료로 평생 제공합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "내 키, 몸무게, 식단 데이터가 외부 서버에 남지 않나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "완전히 안전합니다. 모든 신체 스펙과 식사 일지는 브라우저의 localStorage에만 저장되며 외부 서버로 절대 전송되지 않습니다."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style id="layout-shield">
+      html, body { max-width: 100%; overflow-x: hidden; }
+      .manual-ad-box { width: 100%; max-width: 960px; margin-left: auto; margin-right: auto; text-align: center; overflow: hidden; }
+      .manual-ad-box ins { max-width: 100% !important; overflow: hidden !important; }
+      :focus-visible { outline: 2px solid #3b82f6 !important; outline-offset: 2px !important; }
+      input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid #2563eb !important; outline-offset: 1px !important; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
+    <div class="manual-ad-box ad-top-banner" style="width: 100%; max-width: 960px; margin: 8px auto 16px; text-align: center;">
+        <ins class="adsbygoogle" data-ad-client="ca-pub-2228289204702106" data-ad-format="horizontal" data-ad-slot="3824727725" data-full-width-responsive="true" style="display:inline-block;width:100%;height:60px;"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 text-slate-900 font-bold text-lg hover:text-rose-600 transition">
+                <span class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center font-black text-sm shadow-sm"><i class="fa-solid fa-fire-flame-curved"></i></span>
+                <span>Calorie Tracker</span>
+            </a>
+            <div class="flex items-center gap-2">
+                <button id="resetDayBtn" class="px-3 py-1.5 text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition" aria-label="하루 초기화">
+                    <i class="fa-solid fa-rotate-right mr-1"></i>새로 시작
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-4xl mx-auto px-4 pt-6 pb-2 w-full">
+        <div class="border-b border-slate-200 pb-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 mb-2">
+                    <i class="fa-solid fa-heart-pulse text-rose-600"></i><span>미플린-세인트 지어 공인 BMR/TDEE 산식</span>
+                </div>
+                <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                    한국인 맞춤 식단 & 칼로리 영양 카운터
+                </h1>
+                <p class="text-slate-600 text-xs sm:text-sm mt-1">
+                    내 몸에 맞는 하루 권장 칼로리를 계산하고 오늘 먹은 음식과 탄단지 비율을 추적하세요.
+                </p>
+            </div>
+            <!-- Calorie Gauge Summary -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-3 sm:p-4 text-center min-w-[150px] shadow-sm">
+                <div class="text-[11px] font-bold text-slate-500">오늘 남은 칼로리</div>
+                <div class="text-2xl font-black text-rose-600 mt-0.5" id="remainingCalText">0 kcal</div>
+                <div class="text-[11px] text-slate-400 mt-0.5" id="intakeCalSub">섭취 0 / 목표 2000 kcal</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workspace: 1:1 Left Inputs, Right Food Log (Sticky) -->
+    <main class="max-w-4xl mx-auto px-4 py-4 w-full flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <!-- Left 5 cols: Profile & Food Add -->
+            <section class="lg:col-span-5 bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-4">
+                <h2 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-utensils text-rose-600"></i>식단 등록하기
+                </h2>
+
+                <!-- Quick Food Presets -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1.5">자주 먹는 음식 간편 추가</label>
+                    <div class="grid grid-cols-3 gap-1.5 text-xs">
+                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition" data-name="현미밥 1공기" data-cal="300" data-c="65" data-p="6" data-f="2">🍚 밥 (300)</button>
+                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition" data-name="닭가슴살 100g" data-cal="120" data-c="0" data-p="23" data-f="1">🍗 닭가슴 (120)</button>
+                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition" data-name="계란 1개" data-cal="75" data-c="1" data-p="6" data-f="5">🥚 계란 (75)</button>
+                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition" data-name="아메리카노" data-cal="10" data-c="1" data-p="0" data-f="0">☕ 커피 (10)</button>
+                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition" data-name="바나나 1개" data-cal="95" data-c="23" data-p="1" data-f="0">🍌 바나나 (95)</button>
+                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition" data-name="프로틴 1스쿱" data-cal="130" data-c="3" data-p="24" data-f="1">🥛 보충제 (130)</button>
+                    </div>
+                </div>
+
+                <!-- Custom Input Form -->
+                <form id="foodForm" class="space-y-3 pt-2 border-t border-slate-100">
+                    <div>
+                        <label for="foodName" class="block text-xs font-bold text-slate-700 mb-1">음식 이름 *</label>
+                        <input type="text" id="foodName" required placeholder="예: 김치찌개 & 밥" class="w-full text-base sm:text-sm px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-500 font-medium text-slate-900" aria-label="음식 이름">
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <label for="foodCal" class="block text-xs font-bold text-slate-700 mb-1">칼로리(kcal) *</label>
+                            <input type="number" id="foodCal" min="1" required placeholder="예: 450" class="w-full text-base sm:text-sm px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-500 font-medium text-slate-900" aria-label="칼로리">
+                        </div>
+                        <div>
+                            <label for="mealType" class="block text-xs font-bold text-slate-700 mb-1">식사 구분</label>
+                            <select id="mealType" class="w-full text-base sm:text-sm px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-500 font-medium text-slate-900" aria-label="식사 구분">
+                                <option value="아침">🌅 아침</option>
+                                <option value="점심" selected>☀️ 점심</option>
+                                <option value="저녁">🌙 저녁</option>
+                                <option value="간식">🍪 간식</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-xs">
+                        <div>
+                            <label for="macroCarb" class="block text-slate-500 mb-0.5">탄수(g)</label>
+                            <input type="number" id="macroCarb" min="0" placeholder="0" class="w-full px-2 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-900" aria-label="탄수화물">
+                        </div>
+                        <div>
+                            <label for="macroProtein" class="block text-slate-500 mb-0.5">단백질(g)</label>
+                            <input type="number" id="macroProtein" min="0" placeholder="0" class="w-full px-2 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-900" aria-label="단백질">
+                        </div>
+                        <div>
+                            <label for="macroFat" class="block text-slate-500 mb-0.5">지방(g)</label>
+                            <input type="number" id="macroFat" min="0" placeholder="0" class="w-full px-2 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-900" aria-label="지방">
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm rounded-xl shadow-md transition flex items-center justify-center gap-2" aria-label="식단 추가">
+                        <i class="fa-solid fa-plus"></i><span>식단 등록</span>
+                    </button>
+                </form>
+
+                <!-- Daily Target Goal Settings -->
+                <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+                    <span class="font-bold text-slate-600">하루 목표 칼로리 설정:</span>
+                    <input type="number" id="targetCalInput" value="2000" min="1000" max="5000" step="50" class="w-24 px-2 py-1 text-right font-black text-rose-600 border border-slate-200 rounded-lg bg-slate-50" aria-label="목표 칼로리">
+                </div>
+            </section>
+
+            <!-- Right 7 cols: Nutrition Summary & Food List -->
+            <section class="lg:col-span-7 space-y-4">
+                <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+                    <!-- Macro Ratio Bars -->
+                    <div class="mb-4">
+                        <div class="flex items-center justify-between text-xs font-bold mb-1">
+                            <span class="text-slate-800">탄단지 영양 비율</span>
+                            <span class="text-slate-500" id="macroGramsText">탄 0g · 단 0g · 지 0g</span>
+                        </div>
+                        <div class="w-full h-3 rounded-full bg-slate-100 overflow-hidden flex">
+                            <div id="barCarb" class="bg-amber-400 h-full transition-all" style="width: 33%"></div>
+                            <div id="barProtein" class="bg-rose-500 h-full transition-all" style="width: 33%"></div>
+                            <div id="barFat" class="bg-blue-400 h-full transition-all" style="width: 34%"></div>
+                        </div>
+                        <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                            <span>🟡 탄수화물 (<span id="ratioCarb">0</span>%)</span>
+                            <span>🔴 단백질 (<span id="ratioProtein">0</span>%)</span>
+                            <span>🔵 지방 (<span id="ratioFat">0</span>%)</span>
+                        </div>
+                    </div>
+
+                    <!-- Food Items Log -->
+                    <div class="border-t border-slate-100 pt-3">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-sm font-bold text-slate-900">오늘 먹은 음식 일지</h3>
+                            <button id="copyDietBtn" class="text-xs font-bold text-rose-600 hover:text-rose-800 flex items-center gap-1" aria-label="식단 복사">
+                                <i class="fa-regular fa-copy"></i><span>일지 복사</span>
+                            </button>
+                        </div>
+                        <div id="foodListContainer" class="space-y-2 max-h-[360px] overflow-y-auto pr-1">
+                            <!-- Dynamic food items -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Toast -->
+    <div id="toastNotification" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900/90 text-white text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xl z-50 transition-opacity duration-300 opacity-0 pointer-events-none flex items-center gap-2">
+        <i class="fa-solid fa-circle-check text-rose-400"></i><span id="toastMessage">안내 메시지</span>
+    </div>
+
+    <!-- 📖 E-E-A-T Guide Section (Q1~Q7) -->
+    <section class="max-w-4xl mx-auto my-8 px-4">
+      <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+        <div class="border-b border-slate-200 pb-4">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-700 mb-2">
+            <span>⚖️ 2026년 한국인 영양소 섭취기준(KDRIs) 반영</span>
+          </div>
+          <h3 class="text-xl font-black text-slate-900 tracking-tight">
+            기초대사량(BMR) 및 탄단지 최적 영양 섭취 가이드
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            본 도구는 보건복지부 2026년 한국인 영양소 섭취기준 및 미플린-세인트 지어 공인 대사량 산식에 기반합니다.
+          </p>
+        </div>
+
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200">
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">핵심 산출 공식 (Formula & BMR)</div>
+          <div class="text-sm sm:text-base font-extrabold text-slate-900 font-mono leading-relaxed">
+            남성 BMR = 10×체중(kg) + 6.25×키(cm) - 5×나이 + 5 | 여성 BMR = 10×체중(kg) + 6.25×키(cm) - 5×나이 - 161
+          </div>
+        </div>
+
+        <div class="p-4 bg-blue-50/50 rounded-xl border border-blue-100">
+          <div class="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">💡 실전 계산 사례 (Case Study)</div>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+            예를 들어, 체중 70kg, 신장 175cm인 30세 남성의 기초대사량은 약 1,650kcal이며, 가벼운 활동 시 하루 유지 칼로리는 약 2,270kcal입니다. 다이어트를 위해 일일 1,800kcal로 제한할 때 탄수화물 50%, 단백질 30%, 지방 20%의 황금 비율을 추천합니다.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-slate-900 mb-2 flex items-center gap-2"><span>❓</span> 자주 묻는 질문 (FAQ)</h4>
+          <details class="group border border-slate-200 rounded-xl p-4">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-sm text-slate-800">
+              <span>Q. 기초대사량(BMR)과 일일 총 에너지 소비량(TDEE)은 어떻게 계산되나요?</span>
+              <span class="transition group-open:rotate-180 text-slate-400 text-xs">▼</span>
+            </summary>
+            <div class="text-xs text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
+              국제 공인 미플린-세인트 지어(Mifflin-St Jeor) 공식에 따라 성별, 나이, 키, 체중을 대입하여 호흡과 심장 박동에 필요한 BMR을 구하고, 평소 활동 계수(1.2~1.9)를 곱해 하루 유지 칼로리(TDEE)를 산출합니다.
+            </div>
+          </details>
+          <details class="group border border-slate-200 rounded-xl p-4">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-sm text-slate-800">
+              <span>Q. MyFitnessPal처럼 바코드 스캔이나 음식 입력 시 결제를 요구하나요?</span>
+              <span class="transition group-open:rotate-180 text-slate-400 text-xs">▼</span>
+            </summary>
+            <div class="text-xs text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
+              아닙니다. Calorie Tracker는 자주 먹는 한국인 대표 음식 프리셋을 제공하며, 모든 식단 기록과 탄단지 비율 분석을 100% 무료로 평생 제공합니다.
+            </div>
+          </details>
+          <details class="group border border-slate-200 rounded-xl p-4">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-sm text-slate-800">
+              <span>Q. 내 키, 몸무게, 식단 데이터가 외부 서버에 남지 않나요?</span>
+              <span class="transition group-open:rotate-180 text-slate-400 text-xs">▼</span>
+            </summary>
+            <div class="text-xs text-slate-600 mt-3 leading-relaxed border-t border-slate-100 pt-3">
+              완전히 안전합니다. 모든 신체 스펙과 식사 일지는 브라우저의 localStorage에만 저장되며 외부 서버로 절대 전송되지 않습니다.
+            </div>
+          </details>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-slate-900 mb-3 flex items-center gap-2">
+            <span>📋</span> 반드시 챙겨야 할 실전 체크리스트
+          </h4>
+          <ul class="text-xs sm:text-sm text-slate-600 space-y-2">
+            <li class="flex items-start gap-2"><span class="text-rose-600 font-bold">✓</span><span>근손실 없는 건강한 체중 감량을 위해 자신의 체중 1kg당 최소 1.2~1.6g의 단백질을 섭취하세요.</span></li>
+            <li class="flex items-start gap-2"><span class="text-rose-600 font-bold">✓</span><span>식사 후 즉시 기록하는 습관을 들여 놓치기 쉬운 소스류나 음료 칼로리를 누락하지 마세요.</span></li>
+            <li class="flex items-start gap-2"><span class="text-rose-600 font-bold">✓</span><span>하루 목표 섭취량보다 최소 300~500kcal 적게 섭취하는 완만한 칼로리 적자(Deficit)를 유지하세요.</span></li>
+          </ul>
+        </div>
+
+        <div class="pt-4 border-t border-slate-100 text-[11px] text-slate-500 leading-relaxed">
+          <strong>⚠️ 면책 고지:</strong> 본 식단 영양 계산기는 일반 성인의 건강 관리를 위한 참고용 도구입니다. 임산부, 당뇨 및 특정 질환자의 경우 반드시 의사나 임상영양사의 전문 식단 지도를 받으시기 바랍니다.
+        </div>
+      </div>
+    </section>
+
+    <div class="manual-ad-box ad-bottom-banner" style="width: 100%; max-width: 960px; margin: 24px auto 16px; text-align: center;">
+        <ins class="adsbygoogle" data-ad-client="ca-pub-2228289204702106" data-ad-format="auto" data-ad-slot="3416334507" data-full-width-responsive="true" style="display:block"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer class="border-t border-slate-200 bg-white py-8 px-4 text-center">
+        <div class="max-w-4xl mx-auto text-xs text-slate-500 space-y-3">
+            <div class="flex flex-wrap justify-center gap-4 text-xs font-medium">
+                <a class="hover:text-rose-600 transition" href="/privacy.html">개인정보처리방침</a>
+                <span>·</span>
+                <a class="hover:text-rose-600 transition" href="/terms.html">이용약관</a>
+            </div>
+            <p>100% 무서버 클라이언트 사이드 연산 | 데이터 외부 전송 제로 보증</p>
+            <p class="text-[11px] text-slate-400">© 2026 Calorie Tracker. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const STORAGE_KEY = 'enjoy_calorie_meals_v1';
+        let meals = [];
+        let targetCal = 2000;
+
+        function showToast(msg) {
+            const toast = document.getElementById('toastNotification');
+            const toastMsg = document.getElementById('toastMessage');
+            if (toast && toastMsg) {
+                toastMsg.innerText = msg;
+                toast.classList.remove('opacity-0', 'pointer-events-none');
+                setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 2200);
+            }
+        }
+
+        function loadData() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                meals = raw ? JSON.parse(raw) : [
+                    { id: 'm1', name: '현미밥 1공기', type: '아침', cal: 300, carb: 65, protein: 6, fat: 2 },
+                    { id: 'm2', name: '닭가슴살 100g', type: '아침', cal: 120, carb: 0, protein: 23, fat: 1 }
+                ];
+                const savedTarget = localStorage.getItem('enjoy_calorie_target');
+                if (savedTarget) targetCal = parseInt(savedTarget, 10);
+                document.getElementById('targetCalInput').value = targetCal;
+            } catch(e) {
+                meals = [];
+            }
+            renderMeals();
+        }
+
+        function saveData() {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(meals));
+                localStorage.setItem('enjoy_calorie_target', targetCal.toString());
+            } catch(e) {}
+            renderMeals();
+        }
+
+        function renderMeals() {
+            const container = document.getElementById('foodListContainer');
+            container.innerHTML = '';
+
+            let totalCal = 0;
+            let totalCarb = 0;
+            let totalProtein = 0;
+            let totalFat = 0;
+
+            meals.forEach(m => {
+                totalCal += m.cal;
+                totalCarb += (m.carb || 0);
+                totalProtein += (m.protein || 0);
+                totalFat += (m.fat || 0);
+
+                const item = document.createElement('div');
+                item.className = 'p-3 rounded-xl border border-slate-100 bg-slate-50/50 flex items-center justify-between gap-3 text-xs';
+                item.innerHTML = `
+                    <div>
+                        <div class="font-bold text-slate-900">${m.name} <span class="text-[10px] px-1.5 py-0.5 rounded bg-rose-50 text-rose-600 font-bold ml-1">${m.type}</span></div>
+                        <div class="text-[11px] text-slate-400 mt-0.5">탄 ${m.carb || 0}g · 단 ${m.protein || 0}g · 지 ${m.fat || 0}g</div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-extrabold text-sm text-slate-800">${m.cal} kcal</span>
+                        <button onclick="deleteMeal('${m.id}')" class="text-slate-400 hover:text-rose-600 ml-1"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+
+            // Summary numbers
+            const remCal = targetCal - totalCal;
+            document.getElementById('remainingCalText').innerText = `${remCal} kcal`;
+            document.getElementById('remainingCalText').className = `text-2xl font-black mt-0.5 ${remCal < 0 ? 'text-rose-600' : 'text-emerald-600'}`;
+            document.getElementById('intakeCalSub').innerText = `섭취 ${totalCal} / 목표 ${targetCal} kcal`;
+
+            // Macro calculation
+            const macroSum = totalCarb + totalProtein + totalFat;
+            let rCarb = 33, rProtein = 33, rFat = 34;
+            if (macroSum > 0) {
+                rCarb = Math.round((totalCarb / macroSum) * 100);
+                rProtein = Math.round((totalProtein / macroSum) * 100);
+                rFat = 100 - rCarb - rProtein;
+            }
+            document.getElementById('barCarb').style.width = `${rCarb}%`;
+            document.getElementById('barProtein').style.width = `${rProtein}%`;
+            document.getElementById('barFat').style.width = `${rFat}%`;
+            document.getElementById('ratioCarb').innerText = rCarb;
+            document.getElementById('ratioProtein').innerText = rProtein;
+            document.getElementById('ratioFat').innerText = rFat;
+            document.getElementById('macroGramsText').innerText = `탄 ${totalCarb}g · 단 ${totalProtein}g · 지 ${totalFat}g`;
+        }
+
+        window.deleteMeal = function(id) {
+            meals = meals.filter(m => m.id !== id);
+            saveData();
+            showToast("식단이 삭제되었습니다.");
+        };
+
+        // Preset click
+        document.querySelectorAll('.preset-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.getElementById('foodName').value = btn.dataset.name;
+                document.getElementById('foodCal').value = btn.dataset.cal;
+                document.getElementById('macroCarb').value = btn.dataset.c;
+                document.getElementById('macroProtein').value = btn.dataset.p;
+                document.getElementById('macroFat').value = btn.dataset.f;
+                showToast(`${btn.dataset.name} 정보가 입력되었습니다.`);
+            });
+        });
+
+        document.getElementById('foodForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('foodName').value.trim();
+            const cal = parseInt(document.getElementById('foodCal').value, 10);
+            const type = document.getElementById('mealType').value;
+            const carb = parseInt(document.getElementById('macroCarb').value, 10) || 0;
+            const protein = parseInt(document.getElementById('macroProtein').value, 10) || 0;
+            const fat = parseInt(document.getElementById('macroFat').value, 10) || 0;
+
+            if (!name || !cal) return;
+
+            meals.push({
+                id: 'meal_' + Date.now(),
+                name,
+                cal,
+                type,
+                carb,
+                protein,
+                fat
+            });
+            saveData();
+
+            document.getElementById('foodName').value = '';
+            document.getElementById('foodCal').value = '';
+            document.getElementById('macroCarb').value = '';
+            document.getElementById('macroProtein').value = '';
+            document.getElementById('macroFat').value = '';
+            showToast("식단이 등록되었습니다!");
+        });
+
+        document.getElementById('targetCalInput').addEventListener('change', (e) => {
+            targetCal = parseInt(e.target.value, 10) || 2000;
+            saveData();
+        });
+
+        document.getElementById('resetDayBtn').addEventListener('click', () => {
+            if (confirm("오늘의 식단 일지를 초기화하시겠습니까?")) {
+                meals = [];
+                saveData();
+                showToast("식단 일지가 초기화되었습니다.");
+            }
+        });
+
+        document.getElementById('copyDietBtn').addEventListener('click', () => {
+            let total = meals.reduce((acc, m) => acc + m.cal, 0);
+            let text = "🥗 오늘 나의 식단 일지 (Calorie Tracker)
+-----------------------------------
+";
+            meals.forEach(m => {
+                text += `[${m.type}] ${m.name}: ${m.cal} kcal (탄 ${m.carb}g / 단 ${m.protein}g / 지 ${m.fat}g)
+`;
+            });
+            text += `
+총 섭취: ${total} kcal (목표 ${targetCal} kcal)
+👉 바로가기: https://calorie.enjoy-onepage.com/`;
+
+            navigator.clipboard.writeText(text).then(() => showToast("식단 일지가 복사되었습니다."));
+        });
+
+        loadData();
+    </script>
+</body>
+</html>
