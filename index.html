@@ -117,7 +117,7 @@
                 <span>Calorie Tracker</span>
             </a>
             <div class="flex items-center gap-2">
-                <button id="resetDayBtn" class="px-3 py-1.5 text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition" aria-label="하루 초기화">
+                <button id="resetDayBtn" class="px-3 py-1.5 text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition whitespace-nowrap" aria-label="하루 초기화">
                     <i class="fa-solid fa-rotate-right mr-1"></i>새로 시작
                 </button>
             </div>
@@ -159,12 +159,12 @@
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1.5">자주 먹는 음식 간편 추가</label>
                     <div class="grid grid-cols-3 gap-1.5 text-xs">
-                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition" data-name="현미밥 1공기" data-cal="300" data-c="65" data-p="6" data-f="2">🍚 밥 (300)</button>
-                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition" data-name="닭가슴살 100g" data-cal="120" data-c="0" data-p="23" data-f="1">🍗 닭가슴 (120)</button>
-                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition" data-name="계란 1개" data-cal="75" data-c="1" data-p="6" data-f="5">🥚 계란 (75)</button>
-                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition" data-name="아메리카노" data-cal="10" data-c="1" data-p="0" data-f="0">☕ 커피 (10)</button>
-                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition" data-name="바나나 1개" data-cal="95" data-c="23" data-p="1" data-f="0">🍌 바나나 (95)</button>
-                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition" data-name="프로틴 1스쿱" data-cal="130" data-c="3" data-p="24" data-f="1">🥛 보충제 (130)</button>
+                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition whitespace-nowrap" data-name="현미밥 1공기" data-cal="300" data-c="65" data-p="6" data-f="2">🍚 밥 (300)</button>
+                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition whitespace-nowrap" data-name="닭가슴살 100g" data-cal="120" data-c="0" data-p="23" data-f="1">🍗 닭가슴 (120)</button>
+                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition whitespace-nowrap" data-name="계란 1개" data-cal="75" data-c="1" data-p="6" data-f="5">🥚 계란 (75)</button>
+                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition whitespace-nowrap" data-name="아메리카노" data-cal="10" data-c="1" data-p="0" data-f="0">☕ 커피 (10)</button>
+                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition whitespace-nowrap" data-name="바나나 1개" data-cal="95" data-c="23" data-p="1" data-f="0">🍌 바나나 (95)</button>
+                        <button type="button" class="preset-btn p-2 rounded-lg bg-slate-50 hover:bg-rose-50 border border-slate-200 text-left transition whitespace-nowrap" data-name="프로틴 1스쿱" data-cal="130" data-c="3" data-p="24" data-f="1">🥛 보충제 (130)</button>
                     </div>
                 </div>
 
@@ -203,7 +203,7 @@
                             <input type="number" id="macroFat" min="0" placeholder="0" class="w-full px-2 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-900" aria-label="지방">
                         </div>
                     </div>
-                    <button type="submit" class="w-full py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm rounded-xl shadow-md transition flex items-center justify-center gap-2" aria-label="식단 추가">
+                    <button type="submit" class="w-full py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm rounded-xl shadow-md transition flex items-center justify-center gap-2 whitespace-nowrap" aria-label="식단 추가">
                         <i class="fa-solid fa-plus"></i><span>식단 등록</span>
                     </button>
                 </form>
@@ -240,7 +240,7 @@
                     <div class="border-t border-slate-100 pt-3">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-sm font-bold text-slate-900">오늘 먹은 음식 일지</h3>
-                            <button id="copyDietBtn" class="text-xs font-bold text-rose-600 hover:text-rose-800 flex items-center gap-1" aria-label="식단 복사">
+                            <button id="copyDietBtn" class="text-xs font-bold text-rose-600 hover:text-rose-800 flex items-center gap-1 whitespace-nowrap" aria-label="식단 복사">
                                 <i class="fa-regular fa-copy"></i><span>일지 복사</span>
                             </button>
                         </div>
@@ -251,7 +251,14 @@
                 </div>
             </section>
         </div>
-    </main>
+    
+      <div class="mt-4 text-center">
+        <button id="masterCopyBtn" onclick="copyMasterResult()" class="whitespace-nowrap w-full sm:w-auto px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-md transition flex items-center justify-center gap-2 text-sm mx-auto whitespace-nowrap">
+          <span>📋 결과 복사하기</span>
+        </button>
+      </div>
+
+  </main>
 
     <!-- Toast -->
     <div id="toastNotification" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900/90 text-white text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xl z-50 transition-opacity duration-300 opacity-0 pointer-events-none flex items-center gap-2">
@@ -289,7 +296,20 @@
 
         <div class="space-y-3">
           <h4 class="text-sm font-bold text-slate-900 mb-2 flex items-center gap-2"><span>❓</span> 자주 묻는 질문 (FAQ)</h4>
-          <details class="group border border-slate-200 rounded-xl p-4">
+          
+    <!-- 심층 가이드북 바로가기 (4-1-4 헌법 준수) -->
+    <div class="mt-8 mb-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <span class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full mb-2">2026 실무 가이드</span>
+        <h3 class="text-lg font-bold text-gray-900">공식 기준과 상세 산식이 궁금하신가요?</h3>
+        <p class="text-xs text-gray-600 mt-1">한국인 맞춤 식단 & 칼로리 영양 카운터의 최신 법정 고시, 감면 혜택, 실무 체크리스트를 확인해보세요.</p>
+      </div>
+      <a href="/guides/guide.html" class="whitespace-nowrap px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-md transition flex items-center gap-2 text-xs shrink-0">
+        심층 가이드북 읽기 &rarr;
+      </a>
+    </div>
+
+    <details class="group border border-slate-200 rounded-xl p-4">
             <summary class="flex items-center justify-between cursor-pointer font-bold text-sm text-slate-800">
               <span>Q. 기초대사량(BMR)과 일일 총 에너지 소비량(TDEE)은 어떻게 계산되나요?</span>
               <span class="transition group-open:rotate-180 text-slate-400 text-xs">▼</span>
@@ -432,7 +452,7 @@
                     </div>
                     <div class="flex items-center gap-2">
                         <span class="font-extrabold text-sm text-slate-800">${m.cal} kcal</span>
-                        <button onclick="deleteMeal('${m.id}')" class="text-slate-400 hover:text-rose-600 ml-1"><i class="fa-regular fa-trash-can"></i></button>
+                        <button onclick="deleteMeal('${m.id}')" class="text-slate-400 hover:text-rose-600 ml-1 whitespace-nowrap"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
                 `;
                 container.appendChild(item);
@@ -540,5 +560,39 @@
 
         loadData();
     </script>
+
+  <!-- 원클릭 복사 & 토스트 스크립트 (4-4 헌법 준수) -->
+  <div id="masterToast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs py-3 px-6 rounded-full shadow-2xl transition opacity-0 pointer-events-none z-50">
+    클립보드에 복사되었습니다!
+  </div>
+  <script>
+    function copyMasterResult() {
+      var resEl = document.getElementById('result') || document.getElementById('resultCard') || document.querySelector('.result-box') || document.querySelector('main');
+      var text = resEl ? (resEl.innerText || resEl.textContent) : '한국인 맞춤 식단 & 칼로리 영양 카운터 계산 결과';
+      var shareText = text.trim() + "\n\n👉 한국인 맞춤 식단 & 칼로리 영양 카운터 바로가기: " + window.location.href;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareText).then(showMasterToast);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = shareText;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showMasterToast();
+      }
+    }
+    function showMasterToast() {
+      var t = document.getElementById('masterToast');
+      if (!t) return;
+      t.classList.remove('opacity-0', 'pointer-events-none');
+      t.classList.add('opacity-100');
+      setTimeout(function() {
+        t.classList.remove('opacity-100');
+        t.classList.add('opacity-0', 'pointer-events-none');
+      }, 2200);
+    }
+  </script>
+
 </body>
 </html>
