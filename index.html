@@ -8,17 +8,17 @@
     <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
     <title>한국인 식단 & 칼로리 영양 카운터 | 기초대사량</title>
-    <meta content="한국인 다이어트 맞춤 식단 칼로리 카운터. 기초대사량(BMR) 자동 계산, 탄단지 영양 비율 시각화, 일일 섭취 칼로리 기록 무료." name="description"/>
+    <meta content="한국인 맞춤 식단 칼로리 카운터. 기초대사량(BMR) 자동 계산, 탄단지 영양 비율 시각화, 일일 섭취 칼로리 다이어트 기록 도구입니다." name="description"/>
     <link href="https://calorie.enjoy-onepage.com/" rel="canonical"/>
     <meta content="website" property="og:type"/>
     <meta property="og:locale" content="ko_KR">
     <meta content="https://calorie.enjoy-onepage.com/" property="og:url"/>
-    <meta content="Calorie Tracker - 한국인 식단 & 칼로리 카운터" property="og:title"/>
-    <meta content="기초대사량(BMR)과 탄단지 비율을 계산하고 식단을 기록하는 100% 로컬 다이어트 도구입니다." property="og:description"/>
+    <meta content="한국인 식단 & 칼로리 영양 카운터 | 기초대사량" property="og:title"/>
+    <meta content="한국인 맞춤 식단 칼로리 카운터. 기초대사량(BMR) 자동 계산, 탄단지 영양 비율 시각화, 일일 섭취 칼로리 다이어트 기록 도구입니다." property="og:description"/>
     <meta content="https://calorie.enjoy-onepage.com/og-image.png" property="og:image"/>
     <meta content="summary_large_image" name="twitter:card"/>
-    <meta content="Calorie Tracker - 한국인 식단 & 칼로리 카운터" name="twitter:title"/>
-    <meta content="기초대사량(BMR)과 탄단지 비율을 계산하고 식단을 기록하는 100% 로컬 다이어트 도구입니다." name="twitter:description"/>
+    <meta content="한국인 식단 & 칼로리 영양 카운터 | 기초대사량" name="twitter:title"/>
+    <meta content="한국인 맞춤 식단 칼로리 카운터. 기초대사량(BMR) 자동 계산, 탄단지 영양 비율 시각화, 일일 섭취 칼로리 다이어트 기록 도구입니다." name="twitter:description"/>
     <meta content="https://calorie.enjoy-onepage.com/og-image.png" name="twitter:image"/>
     <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 
@@ -485,9 +485,9 @@ class="manual-ad-box ad-bottom-banner" style="width: 100%; max-width: 960px; mar
 
             // Summary numbers
             const remCal = targetCal - totalCal;
-            document.getElementById('remainingCalText').innerText = `${remCal} kcal`;
+            document.getElementById('remainingCalText').textContent = `${remCal} kcal`;
             document.getElementById('remainingCalText').className = `text-2xl font-black mt-0.5 ${remCal < 0 ? 'text-rose-600' : 'text-emerald-600'}`;
-            document.getElementById('intakeCalSub').innerText = `섭취 ${totalCal} / 목표 ${targetCal} kcal`;
+            document.getElementById('intakeCalSub').textContent = `섭취 ${totalCal} / 목표 ${targetCal} kcal`;
 
             // Macro calculation
             const macroSum = totalCarb + totalProtein + totalFat;
@@ -500,10 +500,10 @@ class="manual-ad-box ad-bottom-banner" style="width: 100%; max-width: 960px; mar
             document.getElementById('barCarb').style.width = `${rCarb}%`;
             document.getElementById('barProtein').style.width = `${rProtein}%`;
             document.getElementById('barFat').style.width = `${rFat}%`;
-            document.getElementById('ratioCarb').innerText = rCarb;
-            document.getElementById('ratioProtein').innerText = rProtein;
-            document.getElementById('ratioFat').innerText = rFat;
-            document.getElementById('macroGramsText').innerText = `탄 ${totalCarb}g · 단 ${totalProtein}g · 지 ${totalFat}g`;
+            document.getElementById('ratioCarb').textContent = rCarb;
+            document.getElementById('ratioProtein').textContent = rProtein;
+            document.getElementById('ratioFat').textContent = rFat;
+            document.getElementById('macroGramsText').textContent = `탄 ${totalCarb}g · 단 ${totalProtein}g · 지 ${totalFat}g`;
         }
 
         window.deleteMeal = function(id) {
